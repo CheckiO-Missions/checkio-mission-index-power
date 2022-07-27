@@ -1,0 +1,23 @@
+{% comment %}New initial code template{% endcomment %}
+{% block env %}{% endblock env %}
+
+{% block start %}
+def index_power(array: list, n: int) -> int:
+    # your code here
+    return None
+{% endblock start %}
+
+{% block example %}
+print('Example:')
+print(index_power([1, 2, 3], 2))
+{% endblock %}
+
+{% block tests %}
+{% for t in tests %}
+assert {% block call %}index_power({{t.input|p_args}})
+{% endblock %} == {% block result %}{{t.answer|p}}{% endblock %}{% endfor %}
+{% endblock %}
+
+{% block final %}
+print("The mission is done! Click 'Check Solution' to earn rewards!")
+{% endblock final %}
