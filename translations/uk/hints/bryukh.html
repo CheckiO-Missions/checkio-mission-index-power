@@ -4,7 +4,7 @@
         Я не знаю, як підійти до розв'язання цієї місії.
     </div>
     <div class="answer">
-        Щоб отримати N-й елемент масиву (списку) ти можеш використати "масив[N]". Поглянь:
+        Щоб отримати n-й елемент масиву (списку) ти можеш використати "масив[n]". Поглянь:
         <a href="http://docs.python.org/3/tutorial/introduction.html#lists">Lists indexes</a>.
     </div>
 </div>
@@ -15,10 +15,9 @@
     <div class="answer">
         Не забудь перевірити, чи N всередині масиву і пам'ятай, що нумерація в масивах починається із 0.
 <pre class="brush: python">
-if N < len(array):
+if n < len(array):
     return ...
-else:
-    return -1
+return -1
 </pre>
     </div>
 </div>
@@ -32,6 +31,19 @@ else:
 2 ** 3 == 8
 4 ** 4 == 256
     </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        І останнє запитання. Як моє остаточне рішення має виглядати?
+    </div>
+    <div class="answer">
+        <pre class="brush: python">
+def index_power(array, n):            
+    if n < len(array):
+        return array[n]**n
+    return -1
+        </pre>
     </div>
 </div>
 

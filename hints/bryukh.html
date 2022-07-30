@@ -4,7 +4,7 @@
         I have no idea how to start solving this mission
     </div>
     <div class="answer">
-        To get N-th element of an array you can use "array[N]".
+        To get n-th element of an array you can use "array[n]".
         <a href="http://docs.python.org/3/tutorial/introduction.html#lists">Lists indexes</a>.
     </div>
 </div>
@@ -15,10 +15,9 @@
     <div class="answer">
         Don't forget to check is it inside an array.
 <pre class="brush: python">
-if N < len(array):
-    ...
-else:
-    return -1
+if n < len(array):
+    return ...
+return -1
 </pre>
     </div>
 </div>
@@ -28,10 +27,23 @@ else:
     </div>
     <div class="answer">
         To calculate a power use the "**" operator.
-<pre class="brush: python">
+        <pre class="brush: python">
 2 ** 3 == 8
 4 ** 4 == 256
-    </pre>
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        One last question. How my final solution will look like?
+    </div>
+    <div class="answer">
+        <pre class="brush: python">
+def index_power(array, n):            
+    if n < len(array):
+        return array[n]**n
+    return -1
+        </pre>
     </div>
 </div>
 
