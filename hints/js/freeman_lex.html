@@ -1,0 +1,124 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>I have no idea how to start solving this mission.</p>
+    </div>
+    <div class="answer">
+        <p>
+            💡 The idea is to compare the given index <b class="code">n</b> with the length of the given array <b class="code">ar</b>. If <b class="code">n</b> is inside the <b class="code">ar</b> - return element with the index powered to the same <b class="code">n</b>, otherwise - return <b class="code">-1</b>.  
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Ok, what should I start from?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Read about <a target="_blank" href="https://www.w3schools.com/jsref/jsref_operators.asp">conditional (ternary) operator</a> and use it in your code to check, if the given index <b class="code">n</b> is inside the array <b class="code">ar</b>, which means that <b class="code">n</b> should be less than the length of the <b class="code">ar</b>.
+        </p>
+        <pre class="brush: javascript">
+let result = n < ar.length ? ... : ...;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ok, what to do next?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            In case, the condition is <b class="code">true</b> (index is inside the array), your function should return the element of array with this index, powered to the index.
+        </p>
+        <pre class="brush: javascript">
+let result = n < ar.length ? ar[n]**n : ...;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            How to complete the conditional operator?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            According to the description, if the index is outside the array, your function should return just <b class="code">-1</b>.
+        </p>
+        <pre class="brush: javascript">
+let result = n < ar.length ? ar[n]**n : -1;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>So, how my final solution should look like?</p>
+    </div>
+    <div class="answer">
+        <p>
+            You just need to wrap your code into function expression and return the result.
+        </p>
+        <p>Here is the whole solution:</p>
+        <pre class="brush: javascript">
+import assert from "assert";
+
+function indexPower(ar: number[], n: number): number {
+
+    let result = n < ar.length ? ar[n]**n : -1;
+    return result
+}
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Show me more solutions!<br />
+        'Cause I wanna be a real 🥇 Javascript Hero!</p>
+    </div>
+    <div class="answer">
+        <p>Sure, grab it!</p>
+        <p>
+            This solution is generally the same, but uses anonymous function and <b class="code">Math.pow()</b> function for powering. 
+        </p>
+        <pre class="brush: javascript">
+import assert from "assert";
+
+var indexPower = (ar: number[], n: number): number => n < ar.length ? Math.pow(ar[n], n) : -1;
+        </pre>
+        <p>
+            Since <b class="code">Math.pow(ar[n], n) (or ar[n]**n)</b> returns <b class="code">NaN</b> in case index is outside the array, you may use logic operator "OR" <b class="code">||</b> instead of ternary operator. 
+        </p>
+        <pre class="brush: javascript">
+import assert from "assert";
+
+var indexPower = (ar: number[], n: number): number => ar[n] ** n || -1;
+// or
+var indexPower = (ar: number[], n: number): number => Math.pow(ar[n], n) || -1;
+        </pre>
+        <p>
+            Here is a more traditional solution, using <b class="code">if</b> statement. Note, that you may not use <b class="code">else</b>, if you use <b class="code">return</b> inside above statement. You also may not use curly brackets, if there is only one expression inside statement and semicolon after the last expression before closing.
+        </p>
+        <pre class="brush: javascript">
+import assert from "assert";
+
+function indexPower(ar: number[], n: number): number {
+    
+    if (n < ar.length)
+        return ar[n]**n;
+    return -1
+}
+        </pre>
+        <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Thanks! I know and understand more now! Everything works fine!</p>
+    </div>
+    <div class="answer">
+        👍 Glad to hear it!
+    </div>
+</div>
+</body>
