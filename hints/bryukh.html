@@ -1,32 +1,43 @@
 <body data-author="bryukh">
 <div class="question-answer">
     <div class="question">
-        I have no idea how to start solving this mission
+        <p>
+            I have no idea how to start solving this mission.
+        </p>
     </div>
     <div class="answer">
-        To get n-th element of an array you can use "array[n]".
-        <a href="http://docs.python.org/3/tutorial/introduction.html#lists">Lists indexes</a>.
+        <p>
+            To get n-th element of an array you can use <b class="code">array[n]</b>. <a target="_blank" href="http://docs.python.org/3/tutorial/introduction.html#lists">Lists indexes</a>.
+        </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        I need some help to proceed with the mission
+        <p>
+            I need some help to proceed with the mission.
+        </p>
     </div>
     <div class="answer">
-        Don't forget to check is it inside an array.
-<pre class="brush: python">
+        <p>
+            Don't forget to check is it's inside an array.
+        </p>      
+        <pre class="brush: python">
 if n < len(array):
     return ...
 return -1
-</pre>
+        </pre>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        I am gone half way through. Need help!
+        <p>
+            I am gone half way through. Need help!
+        </p>
     </div>
     <div class="answer">
-        To calculate a power use the "**" operator.
+        <p>
+            To calculate a power use the <b class="code">**</b> operator.
+        </p>
         <pre class="brush: python">
 2 ** 3 == 8
 4 ** 4 == 256
@@ -35,17 +46,18 @@ return -1
 </div>
 <div class="question-answer">
     <div class="question">
-        One last question. How my final solution will look like?
+        <p>
+            One last question. How my final solution will look like?
+        </p>
     </div>
     <div class="answer">
         <pre class="brush: python">
-def index_power(array, n):            
+def index_power(array: list[int], n: int) -> int:   
+
     if n < len(array):
         return array[n]**n
     return -1
         </pre>
     </div>
 </div>
-
-
 </body>
