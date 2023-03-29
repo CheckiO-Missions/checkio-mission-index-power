@@ -61,15 +61,15 @@ let result = n < ar.length ? ar[n]**n : -1;
             Тобі лише потрібно обгорнути свій код у вираз функції і повернути результат.
         </p>
         <p>Ось остаточне рішення:</p>
+        <div class="spoiler">
         <pre class="brush: javascript">
-import assert from "assert";
-
 function indexPower(ar: number[], n: number): number {
 
     let result = n < ar.length ? ar[n]**n : -1;
     return result
 }
         </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
@@ -82,27 +82,26 @@ function indexPower(ar: number[], n: number): number {
         <p>
             Цей розв'язок загалом такий же, але використовує анонімну функцію і функцію <b class="code">Math.pow()</b> для піднесення в степінь. 
         </p>
+        <div class="spoiler">
         <pre class="brush: javascript">
-import assert from "assert";
-
 var indexPower = (ar: number[], n: number): number => n < ar.length ? Math.pow(ar[n], n) : -1;
         </pre>
+        </div>
         <p>
             Оскільки <b class="code">Math.pow(ar[n], n) (або ar[n]**n)</b> повертає <b class="code">NaN</b> у випадку, якщо індекс за межами масиву, ти можеш використати логічний оператор "OR" (або) <b class="code">||</b> замість потрійного оператора. 
         </p>
+        <div class="spoiler">
         <pre class="brush: javascript">
-import assert from "assert";
-
 var indexPower = (ar: number[], n: number): number => ar[n] ** n || -1;
 // або
 var indexPower = (ar: number[], n: number): number => Math.pow(ar[n], n) || -1;
         </pre>
+        </div>
         <p>
             Ось більш традиційний розв'язок, використовуючи вираз <b class="code">if</b>. Зауваж, що ти можеш не використовувати <b class="code">else</b>, якщо маєш <b class="code">return</b> всередині виразу вище. Ти також можеш не використовувати хвилясті дужки, якщо лише один вираз всередині, і крапку з комою після останнього виразу перед закриваючою дужкою.
         </p>
+            <div class="spoiler">
         <pre class="brush: javascript">
-import assert from "assert";
-
 function indexPower(ar: number[], n: number): number {
     
     if (n < ar.length)
@@ -110,6 +109,7 @@ function indexPower(ar: number[], n: number): number {
     return -1
 }
         </pre>
+        </div>
         <p><b>Тисни "Best solutions" в меню місії і побачиш багато інших цікавих розв'язків!</b></p>
     </div>
 </div>
