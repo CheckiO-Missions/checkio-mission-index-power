@@ -61,6 +61,7 @@ let result = n < ar.length ? ar[n]**n : -1;
             You just need to wrap your code into function expression and return the result.
         </p>
         <p>Here is the whole solution:</p>
+        <div class="spoiler">
         <pre class="brush: javascript">
 import assert from "assert";
 
@@ -70,6 +71,7 @@ function indexPower(ar: number[], n: number): number {
     return result
 }
         </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
@@ -82,27 +84,26 @@ function indexPower(ar: number[], n: number): number {
         <p>
             This solution is generally the same, but uses anonymous function and <b class="code">Math.pow()</b> function for powering. 
         </p>
+        <div class="spoiler">
         <pre class="brush: javascript">
-import assert from "assert";
-
 var indexPower = (ar: number[], n: number): number => n < ar.length ? Math.pow(ar[n], n) : -1;
         </pre>
+        </div>
         <p>
             Since <b class="code">Math.pow(ar[n], n) (or ar[n]**n)</b> returns <b class="code">NaN</b> in case index is outside the array, you may use logic operator "OR" <b class="code">||</b> instead of ternary operator. 
         </p>
+        <div class="spoiler">
         <pre class="brush: javascript">
-import assert from "assert";
-
 var indexPower = (ar: number[], n: number): number => ar[n] ** n || -1;
 // or
 var indexPower = (ar: number[], n: number): number => Math.pow(ar[n], n) || -1;
         </pre>
+        </div>
         <p>
             Here is a more traditional solution, using <b class="code">if</b> statement. Note, that you may not use <b class="code">else</b>, if you use <b class="code">return</b> inside above statement. You also may not use curly brackets, if there is only one expression inside statement and semicolon after the last expression before closing.
         </p>
+        <div class="spoiler">
         <pre class="brush: javascript">
-import assert from "assert";
-
 function indexPower(ar: number[], n: number): number {
     
     if (n < ar.length)
@@ -110,6 +111,7 @@ function indexPower(ar: number[], n: number): number {
     return -1
 }
         </pre>
+        </div>
         <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
     </div>
 </div>
