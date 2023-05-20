@@ -11,17 +11,17 @@
 </p>
 
 <p>
-    <strong>Input: </strong> Two arguments. An array as a list of integers and a number as a integer.
+    <strong>Input:</strong> Two arguments. An array as a list of {% if is_js %}<span translate="repeat">Numbers</span>{% else %}<span translate="repeat">integers</span>{% endif %} and a number as {% if is_js %}a <span translate="repeat">Number</span>{% else %}an <span translate="repeat">integer</span>{% endif %}.
 </p>
 
 <p>
-    <strong>Output: </strong> The result as an integer.
+    <strong>Output:</strong> The result as {% if is_js %}a <span translate="repeat">Number</span>{% else %}an <span translate="repeat">integer</span>{% endif %}.
 </p>
 
 
 <div class="for_info_only">
     <p>
-        <strong>Example:</strong>
+        <strong>Examples:</strong>
     </p>
     <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
