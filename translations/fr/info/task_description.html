@@ -1,40 +1,37 @@
 <p>
-    On vous donne une liste avec des nombres positifs et un nombre N.
-    Vous devez trouvez la N-i&egrave;me puissance de l'&eacute;l&eacute;ment de la liste &agrave; l'index N.
-    Si N est en dehors de la liste, alors vous devez retourner -1.
-    N'oubliez pas que le premier &eacute;l&eacute;ment est &agrave; l'index 0.
+    On vous donne {% if is_js %}un <span>tableau</span> <span>(array)</span>{% else %} une <span>liste</span> <span>(list)</span>{% endif %} avec des<span>nombres</span> positifs {% if is_js %} <span>(numbers)</span><span> </span>{% else %} <span>des entiers</span> <span>(integers)</span>{% endif %} et {% if is_js %}un <span>nombre</span> <span>(number)</span>{% else %} un <span>entier</span> <span>(integer)</span>{% endif %} N. Vous devez trouver la N-ième puissance de l'élément dans le<span>tableau</span> {% if is_js %}<span></span> <span>(array)</span><span> </span>{% else %} <span>liste</span> <span>(list)</span>{% endif %} avec l'indice N. Si N est en dehors du<span>tableau</span> {% if is_js %}<span></span> <span>(array)</span><span> </span>{% else %} <span>liste</span> <span>(list)</span>{% endif %} , alors renvoyez -1. N'oubliez pas que le premier élément a l'indice 0.
 </p>
 
 <p>
-    Regardons quelques exemples :<br>
-    - liste = [1, 2, 3, 4] et N = 2, alors le r&eacute;sultat est 3<sup>2</sup> == 9;<br>
-    - liste = [1, 2, 3] et N = 3, mais N est &agrave; l'ext&eacute;rieur de la liste, donc le r&eacute;sultat est -1.
+    Voyons quelques exemples:<br>
+    - {% if is_js %}<span>array</span>{% else %} list{% endif %} = [1, 2, 3, 4] et N = 2, le résultat est<sup>32</sup> == 9;<br>
+    - {% if is_js %}<span>array</span>{% else %}<span>list</span>{% endif %} = [1, 2, 3] et N = 3, mais N est en dehors de l'<span>array</span> {% if is_js %}<span></span> <span>(array)</span><span> </span>{% else %} <span>list</span>{% endif %} , donc le résultat est -1.
 </p>
 
 <p>
-    <strong>Entr&eacute;e : </strong> Deux arguments. Une liste d'entiers et un nombre en tant qu'entier.
+   <strong>Entrée:</strong> Deux arguments.{% if is_js %}Un <span>tableau</span> <span>(array)</span>{% else %} Une <span>liste</span> <span>(list)</span>{% endif %} de {% if is_js %}<span>nombres</span> <span>(numbers)</span>{% else %}<span>entiers</span> <span>(integers)</span>{% endif %} et un nombre comme {% if is_js %}un <span>nombre</span> <span>(number)</span>{% else %} un <span>entier</span> <span>(integer)</span>{% endif %}.
 </p>
 
 <p>
-    <strong>Sortie : </strong> Le r&eacute;sultat en tant qu'entier.
+   <strong>Résultat:</strong> Le résultat sous la forme {% if is_js %}d'un <span>nombre</span> <span>(number)</span>{% else %} d'un <span>entier</span> <span>(integer)</span>{% endif %}.
 </p>
 
 
 <div class="for_info_only">
     <p>
-        <strong>Exemple :</strong>
+        <strong>Exemples:</strong>
     </p>
     <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 <p class="for_info_only">
-    <strong>&Agrave; quoi cela sert : </strong>
-    Cette mission vous apprend &agrave; utiliser des listes et index de base, combin&eacute;s &agrave; des math&eacute;matiques simples.
+   <strong>Comment l'utiliser: </strong>
+    Cette mission vous apprend à utiliser des tableaux et des index de base en combinaison avec des mathématiques simples.
 </p>
 
 <p>
-    <strong>Pr&eacute;condition :</strong>
-    0 &lt; len(liste) &le; 10<br>
+   <strong>Condition préalable:</strong>
+    0 &lt; len(array) &le; 10<br>
     0 &le; N<br>
-    all(0 &le; x &le; 100 for x in liste)<br>
+    all(0 &le; x &le; 100 for x in array)<br>
 </p>
