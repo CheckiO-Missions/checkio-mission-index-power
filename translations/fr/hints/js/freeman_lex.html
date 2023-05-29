@@ -1,0 +1,126 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>Je n'ai aucune idée de la manière de commencer à résoudre cette mission.</p>
+    </div>
+    <div class="answer">
+        <p>
+            💡 L'idée est de comparer l'index donné <b class="code">n</b> avec la longueur du tableau donné <b class="code">ar</b>. Si <b class="code">n</b> est à l'intérieur de <b class="code">ar</b> - retournez l'élément avec l'index alimenté au même <b class="code">n</b>, sinon - retournez <b class="code">-1</b>.  
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Ok, par quoi dois-je commencer?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Lisez <a target="_blank" href="https://www.w3schools.com/jsref/jsref_operators.asp">conditional (ternary) operator</a> et utilisez-le dans votre code pour vérifier si l'index donné <b class="code">n</b> est à l'intérieur du tableau <b class="code">ar</b>, ce qui signifie que <b class="code">n</b> doit être inférieur à la longueur de <b class="code">ar</b>.
+        </p>
+        <pre class="brush: javascript">
+let result = n < ar.length? ...: ...;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ok, que faire ensuite?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Dans le cas où la condition est <b class="code">true</b> (l'index est à l'intérieur du tableau), votre fonction doit retourner l'élément du tableau avec cet index, propulsé à l'index.
+        </p>
+        <pre class="brush: javascript">
+let result = n < ar.length? ar[n]**n: ...;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Comment compléter l'opérateur conditionnel?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            D'après la description, si l'index est en dehors du tableau, votre fonction devrait retourner seulement <b class="code">-1</b>.
+        </p>
+        <pre class="brush: javascript">
+let result = n < ar.length? ar[n]**n: -1;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Alors, à quoi devrait ressembler ma solution finale?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Il vous suffit d'envelopper votre code dans une expression de fonction et de renvoyer le résultat.
+        </p>
+        <p>Voici la solution complète:</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+import assert from "assert";
+
+function indexPower(ar: number[], n: number): number {
+
+    let result = n < ar.length? ar[n]**n: -1;
+    return result
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Montrez-moi d'autres solutions!<br />
+        parce que je veux être un vrai 🥇 Javascript Hero!</p>
+    </div>
+    <div class="answer">
+        <p>Bien sûr, prenez-le!</p>
+        <p>
+            Cette solution est globalement la même, mais utilise une fonction anonyme et une fonction <b class="code">Math.pow()</b> pour l'alimentation. 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+var indexPower = (ar: number[], n: number): number => n < ar.length? Math.pow(ar[n], n): -1;
+        </pre>
+        </div>
+        <p>
+            Comme <b class="code">Math.pow(ar[n], n) (or ar[n]**n)</b> renvoie <b class="code">NaN</b> si l'index est en dehors du tableau, vous pouvez utiliser l'opérateur logique "OR" <b class="code">||</b> au lieu de l'opérateur ternaire. 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+var indexPower = (ar: number[], n: number): number => ar[n] ** n || -1;
+// or
+var indexPower = (ar: number[], n: number): number => Math.pow(ar[n], n) || -1;
+        </pre>
+        </div>
+        <p>
+            Voici une solution plus traditionnelle, utilisant l'instruction <b class="code">if</b>. Notez que vous ne pouvez pas utiliser <b class="code">else</b>, si vous utilisez <b class="code">return</b> dans l'instruction ci-dessus. Vous ne pouvez pas non plus utiliser les crochets courbes s'il n'y a qu'une seule expression dans l'instruction et le point-virgule après la dernière expression avant la fermeture.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function indexPower(ar: number[], n: number): number {
+    
+    if (n < ar.length)
+        return ar[n]**n;
+    return -1
+}
+        </pre>
+        </div>
+        <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Merci beaucoup! Je comprends mieux maintenant! Tout fonctionne bien!</p>
+    </div>
+    <div class="answer">
+        👍 Heureux de l'apprendre!
+    </div>
+</div>
+</body>
