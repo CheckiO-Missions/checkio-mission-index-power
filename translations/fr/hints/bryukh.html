@@ -1,0 +1,65 @@
+<body data-author="bryukh">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Je n'ai aucune idée de la manière de commencer à résoudre cette mission.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Pour obtenir le n-ième élément d'un tableau, vous pouvez utiliser <b class="code">array[n]</b>. <a target="_blank" href="http://docs.python.org/3/tutorial/introduction.html#lists">Lists indexes</a>.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            J'ai besoin d'aide pour poursuivre la mission.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            N'oubliez pas de vérifier s'il se trouve à l'intérieur d'un tableau.
+        </p>      
+        <pre class="brush: python">
+if n < len(array):
+    return ...
+return -1
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Je suis à mi-chemin. J'ai besoin d'aide!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Pour calculer une puissance, utilisez l'opérateur <b class="code">**</b>.
+        </p>
+        <pre class="brush: python">
+2 ** 3 == 8
+4 ** 4 == 256
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Une dernière question. A quoi ressemblera ma solution finale?
+        </p>
+    </div>
+    <div class="answer">
+        <div class="spoiler">
+        <pre class="brush: python">
+def index_power(array: list[int], n: int) -> int:   
+
+    if n < len(array):
+        return array[n]**n
+    return -1
+        </pre>
+        </div>
+    </div>
+</div>
+</body>
