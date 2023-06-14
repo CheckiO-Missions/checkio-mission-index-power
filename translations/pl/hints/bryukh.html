@@ -1,0 +1,65 @@
+<body data-author="bryukh">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Nie mam pojęcia, jak zacząć rozwiązywać tę misję.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Aby uzyskać n-ty element tablicy można użyć <b class="code">array[n]</b>. <a target="_blank" href="http://docs.python.org/3/tutorial/introduction.html#lists">Lists indexes</a>.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Potrzebuję pomocy, aby kontynuować misję.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Proszę nie zapomnieć sprawdzić, czy znajduje się wewnątrz tablicy.
+        </p>      
+        <pre class="brush: python">
+if n < len(array):
+    return ...
+return -1
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Zniknąłem w połowie. Proszę o pomoc!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Aby obliczyć moc, proszę użyć operatora <b class="code">**</b>.
+        </p>
+        <pre class="brush: python">
+2 ** 3 == 8
+4 ** 4 == 256
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ostatnie pytanie. Jak będzie wyglądało moje ostateczne rozwiązanie?
+        </p>
+    </div>
+    <div class="answer">
+        <div class="spoiler">
+        <pre class="brush: python">
+def index_power(array: list[int], n: int) -> int:   
+
+    if n < len(array):
+        return array[n]**n
+    return -1
+        </pre>
+        </div>
+    </div>
+</div>
+</body>
