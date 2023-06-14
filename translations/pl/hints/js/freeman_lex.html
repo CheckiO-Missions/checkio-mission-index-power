@@ -1,0 +1,126 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>Nie mam pojęcia, jak zacząć rozwiązywać tę misję.</p>
+    </div>
+    <div class="answer">
+        <p>
+            chodzi o porównanie podanego indeksu <b class="code">n</b> z długością podanej tablicy <b class="code">ar</b>. Jeśli <b class="code">n</b> znajduje się wewnątrz <b class="code">ar</b> - zwracany jest element o indeksie zasilonym tym samym <b class="code">n</b>, w przeciwnym wypadku - zwracany jest <b class="code">-1</b>.  
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Ok, od czego powinienem zacząć?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Proszę poczytać o <a target="_blank" href="https://www.w3schools.com/jsref/jsref_operators.asp">conditional (ternary) operator</a> i użyć go w swoim kodzie do sprawdzenia, czy podany indeks <b class="code">n</b> znajduje się wewnątrz tablicy <b class="code">ar</b>, co oznacza, że <b class="code">n</b> powinien być mniejszy niż długość <b class="code">ar</b>.
+        </p>
+        <pre class="brush: javascript">
+let result = n < ar.length? ...: ...;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ok, co robić dalej?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            W przypadku, gdy warunek jest <b class="code">true</b> (indeks jest wewnątrz tablicy), Pana funkcja powinna zwrócić element tablicy z tym indeksem, zasilony indeksem.
+        </p>
+        <pre class="brush: javascript">
+let result = n < ar.length? ar[n]**n: ...;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Jak uzupełnić operator warunkowy?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Zgodnie z opisem, jeśli indeks znajduje się poza tablicą, Pana funkcja powinna zwrócić tylko <b class="code">-1</b>.
+        </p>
+        <pre class="brush: javascript">
+let result = n < ar.length? ar[n]**n: -1;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Jak więc powinno wyglądać moje ostateczne rozwiązanie?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Wystarczy zawinąć kod w wyrażenie funkcji i zwrócić wynik.
+        </p>
+        <p>Oto całe rozwiązanie:</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+import assert from "assert";
+
+function indexPower(ar: number[], n: number): number {
+
+    let result = n < ar.length? ar[n]**n: -1;
+    return result
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Proszę pokazać mi więcej rozwiązań!<br />
+        bo chcę być prawdziwym 🥇 bohaterem Javascriptu!</p>
+    </div>
+    <div class="answer">
+        <p>Jasne, proszę pobrać!</p>
+        <p>
+            To rozwiązanie jest zasadniczo takie samo, ale wykorzystuje funkcję anonimową i funkcję <b class="code">Math.pow()</b> do zasilania. 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+var indexPower = (ar: number[], n: number): number => n < ar.length? Math.pow(ar[n], n): -1;
+        </pre>
+        </div>
+        <p>
+            Ponieważ <b class="code">Math.pow(ar[n], n) (or ar[n]**n)</b> zwraca <b class="code">NaN</b> w przypadku, gdy indeks znajduje się poza tablicą, można użyć operatora logicznego "OR" <b class="code">||</b> zamiast operatora trójargumentowego. 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+var indexPower = (ar: number[], n: number): number => ar[n] ** n || -1;
+// or
+var indexPower = (ar: number[], n: number): number => Math.pow(ar[n], n) || -1;
+        </pre>
+        </div>
+        <p>
+            Oto bardziej tradycyjne rozwiązanie, wykorzystujące instrukcję <b class="code">if</b>. Proszę zauważyć, że nie można użyć <b class="code">else</b>, jeśli użyto <b class="code">return</b> wewnątrz powyższej instrukcji. Proszę również nie używać nawiasów klamrowych, jeśli wewnątrz instrukcji znajduje się tylko jedno wyrażenie, oraz średnika po ostatnim wyrażeniu przed zamknięciem.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function indexPower(ar: number[], n: number): number {
+    
+    if (n < ar.length)
+        return ar[n]**n;
+    return -1
+}
+        </pre>
+        </div>
+        <p>Proszę kliknąć <b>Best Solutions</b> w menu misji i zobaczyć wiele innych ciekawych rozwiązań!</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Dzięki! Teraz wiem i rozumiem więcej! Wszystko działa dobrze!</p>
+    </div>
+    <div class="answer">
+        miło mi to słyszeć!
+    </div>
+</div>
+</body>

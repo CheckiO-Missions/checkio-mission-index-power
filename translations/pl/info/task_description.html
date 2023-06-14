@@ -1,39 +1,37 @@
 <p>
-	Dostajesz tablicę z dodatnimi liczbami naturalnymi i liczbę N. Oblicz N-tą potęgę elementu tablicy o indeksie N.
-	Jeżeli N jest poza tablicą, zwróć -1. Nie zapomnij, że pierwszy element tablicy ma indeks 0.
+    Otrzymują Państwo {% if is_js %}tablicę <span>(array)</span>{% else %} listę <span>(list)</span>{% endif %} z dodatnimi liczbami całkowitymi <span>{% if is_js %}(number){% else %}(int){% endif %}</span> oraz liczbę całkowitą <span>{% if is_js %}(number){% else %}(int){% endif %}</span> N. Proszę znaleźć N-tą potęgę elementu w tablicy {% if is_js %} <span>(array)</span> {% else %} lista <span>(list)</span>{% endif %} o indeksie N. Jeśli N jest poza tablicą {% if is_js %} <span>(array)</span> {% else %} lista <span>(list)</span>{% endif %} , to proszę zwrócić -1. Proszę pamiętać, że pierwszy element ma indeks 0.
 </p>
 
 <p>
-	Zobaczmy na kilka przykładów:<br>
-	- tablica = [1, 2, 3, 4] i N = 2, wynik: 3<sup>2</sup> == 9;<br>
-	- tablica = [1,2 ,3] i N = 3, ale N jest poza tablicą, więc wynik równa się -1.
+    Proszę spojrzeć na kilka przykładów:<br>
+    - {% if is_js %}tablica <span>(array)</span>{% else %} lista <span>(list)</span>{% endif %} = [1, 2, 3, 4] i N = 2, wtedy wynikiem jest<sup>32</sup> == 9;<br>
+    - {% if is_js %}tablica <span>(array)</span>{% else %} lista <span>(list)</span>{% endif %} = [1, 2, 3] i N = 3, ale N jest poza tablicą {% if is_js %} <span>(array)</span> {% else %} lista <span>(list)</span>{% endif %} , więc wynikiem jest -1.
 </p>
 
 <p>
-	<strong>Wejście: </strong> Dwa parametry. Tablica - lista liczb i liczba (integer).
+   <strong>Wejście:</strong> Dwa argumenty.{% if is_js %}Tablica <span>(array)</span>{% else %} Lista <span>(list)</span>{% endif %} liczb całkowitych <span>{% if is_js %}(number){% else %}(int){% endif %}</span> i liczbę całkowitą <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.
 </p>
 
 <p>
-	<strong>Wyjście: </strong> Wynik jako liczba naturalna (integer).
+   <strong>Wyjście:</strong> Wynik jako liczba całkowita <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.
 </p>
 
 
 <div class="for_info_only">
     <p>
-		<strong>Przykład:</strong>
+        <strong>Przykłady:</strong>
     </p>
     <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 <p class="for_info_only">
-    <strong>How it is used: </strong>
-	<strong>Korzyście: </strong>
-	Ta misja nauczy Cię jak używać podstawowych tablic i indeksów oraz prostych działań matematycznych.
+   <strong>Jak to jest używane:</strong>
+    Ta misja uczy, jak używać podstawowych tablic i indeksów w połączeniu z prostą matematyką.
 </p>
 
 <p>
-    <strong>Założenia:</strong>
-    0 &lt; len(tablica) &le; 10<br>
+   <strong>Warunek wstępny:</strong>
+    0 &lt; len(array) &le; 10<br>
     0 &le; N<br>
-    dla-każdego(0 &le; x &le; 100 dla x w tablicy)<br>
+    all(0 &le; x &le; 100 for x in array)<br>
 </p>
