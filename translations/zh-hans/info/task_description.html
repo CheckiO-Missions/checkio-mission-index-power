@@ -1,0 +1,37 @@
+<p>
+    给你一个{% if is_js %}，一个数组<span>(array)</span>{% else %} ，一个列表<span>(list)</span>{% endif %} ，其中有正整数 <span>{% if is_js %}(number){% else %}(int){% endif %}</span>和一个整数 <span>{% if is_js %}(number){% else %}(int){% endif %}</span>你应该在{% if is_js %}数组<span>(array)</span>{% else %} 列表<span>(list)</span>{% endif %} 中找到索引为N的元素的N次方。如果N不在{% if is_js %}数组<span>(array)</span>{% else %} 列表<span>(list)</span>{% endif %} ，则返回-1。不要忘记，第一个元素的索引是0。
+</p>
+
+<p>
+    我们来看看几个例子：<br>
+    -{% if is_js %}array<span>(array)</span>{% else %} list<span>(list)</span>{% endif %} = [1, 2, 3, 4] and N = 2, then the result is<sup>32</sup>== 9；<br>
+    -{% if is_js %}数组<span>(array)</span>{% else %} 列表<span>(list)</span>{% endif %} = [1, 2, 3] 并且 N = 3, 但是 N 在{% if is_js %}数组<span>(array)</span>{% else %} 列表<span>(list)</span>{% endif %} , 所以结果是 -1。
+</p>
+
+<p>
+   <strong>输入：</strong>两个参数。{% if is_js %}一个数组<span>(array)</span>{% else %} 一个整数的列表<span>(list)</span>{% endif %} <span>{% if is_js %}(number){% else %}(int){% endif %}</span>和一个整数 <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.
+</p>
+
+<p>
+   <strong>输出：</strong>结果是一个整数 <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>例子：</strong>
+    </p>
+    <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+</div>
+
+<p class="for_info_only">
+   <strong>它是如何被使用的：</strong>
+    这个任务教你如何使用基本的数组和索引，当与简单的数学相结合。
+</p>
+
+<p>
+   <strong>前提条件：</strong>
+    0 &lt; len(array) &le; 10<br>
+    0 &le; N<br>
+    所有(0 &le; x &le; 100 for x in array)<br>
+</p>
