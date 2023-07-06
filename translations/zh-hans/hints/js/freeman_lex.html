@@ -1,0 +1,126 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>我不知道如何开始解决这个任务。</p>
+    </div>
+    <div class="answer">
+        <p>
+            💡 这个想法是将给定的索引<b class="code">n</b> 与给定数组<b class="code">ar</b> 的长度进行比较。如果<b class="code">n</b> 在<b class="code">ar</b> 之内 - 返回索引被驱动到相同的<b class="code">n</b> 的元素，否则 - 返回<b class="code">-1</b> 。  
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>好的，我应该从什么开始？</p>
+    </div>
+    <div class="answer">
+        <p>
+            阅读关于<a target="_blank" href="https://www.w3schools.com/jsref/jsref_operators.asp">conditional (ternary) operator</a> ，并在你的代码中使用它来检查，如果给定的索引<b class="code">n</b> 是在数组<b class="code">ar</b> 内，这意味着<b class="code">n</b> 应该小于<b class="code">ar</b> 的长度。
+        </p>
+        <pre class="brush: javascript">
+let result = n < ar.length? ...: ...;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            好的，接下来该怎么做？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            如果条件是<b class="code">true</b> （索引在数组内），你的函数应该返回具有该索引的数组元素，并向该索引供电。
+        </p>
+        <pre class="brush: javascript">
+let result = n < ar.length? ar[n]**n: ...;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            如何完成条件运算符？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            根据描述，如果索引在数组之外，你的函数应该只返回<b class="code">-1</b> 。
+        </p>
+        <pre class="brush: javascript">
+let result = n < ar.length? ar[n]**n: -1;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>那么，我的最终解决方案应该是什么样子的呢？</p>
+    </div>
+    <div class="answer">
+        <p>
+            你只需要把你的代码包装成函数表达式并返回结果。
+        </p>
+        <p>下面是整个解决方案：</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+import assert from "assert";
+
+function indexPower(ar: number[], n: number): number {
+
+    let result = n < ar.length? ar[n]**n: -1;
+    return result
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>告诉我更多的解决方案!<br />
+        因为我想成为一个真正的🥇 Javascript英雄!</p>
+    </div>
+    <div class="answer">
+        <p>当然，抓住它!</p>
+        <p>
+            这个解决方案大致相同，但使用匿名函数和<b class="code">Math.pow()</b> 函数来供电。 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+var indexPower = (ar: number[], n: number): number => n < ar.length? Math.pow(ar[n], n): -1;
+        </pre>
+        </div>
+        <p>
+            由于<b class="code">Math.pow(ar[n], n) (or ar[n]**n)</b> ，如果索引在数组之外，则返回<b class="code">NaN</b> ，你可以使用逻辑运算符 "OR "<b class="code">||</b> ，而不是三元运算符。 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+var indexPower = (ar: number[], n: number): number => ar[n] ** n || -1;
+// or
+var indexPower = (ar: number[], n: number): number => Math.pow(ar[n], n) || -1;
+        </pre>
+        </div>
+        <p>
+            下面是一个更传统的解决方案，使用<b class="code">if</b> 语句。注意，如果你在上述语句中使用<b class="code">return</b> ，就不能使用<b class="code">else</b> 。如果语句中只有一个表达式，你也可以不使用大括号，而在最后一个表达式后使用分号来结束。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function indexPower(ar: number[], n: number): number {
+    
+    if (n < ar.length)
+        return ar[n]**n;
+    return -1
+}
+        </pre>
+        </div>
+        <p>点击任务菜单中的<b>Best Solutions</b> ，可以看到很多其他有趣的解决方案!</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>谢谢!我现在知道并理解了更多!一切工作都很顺利!</p>
+    </div>
+    <div class="answer">
+        👍很高兴听到这个消息!
+    </div>
+</div>
+</body>
