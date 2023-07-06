@@ -1,0 +1,65 @@
+<body data-author="bryukh">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我不知道如何开始解决这个任务。
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            要获得一个数组的第n个元素，你可以使用<b class="code">array[n]</b>.<a target="_blank" href="http://docs.python.org/3/tutorial/introduction.html#lists">Lists indexes</a>.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我需要一些帮助来继续完成任务。
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            不要忘了检查它是否在一个数组内。
+        </p>      
+        <pre class="brush: python">
+if n < len(array):
+    return ...
+return -1
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我已经走了一半的路了。需要帮助!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            要计算功率，请使用<b class="code">**</b> 算子。
+        </p>
+        <pre class="brush: python">
+2 ** 3 == 8
+4 ** 4 == 256
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            最后一个问题。我的最终解决方案会是什么样子的？
+        </p>
+    </div>
+    <div class="answer">
+        <div class="spoiler">
+        <pre class="brush: python">
+def index_power(array: list[int], n: int) -> int:   
+
+    if n < len(array):
+        return array[n]**n
+    return -1
+        </pre>
+        </div>
+    </div>
+</div>
+</body>
