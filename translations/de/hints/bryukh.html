@@ -1,39 +1,65 @@
 <body data-author="bryukh">
 <div class="question-answer">
     <div class="question">
-        Ich habe keine Ahnung wo ich mit der Lösung anfangen soll.
+        <p>
+            Ich habe keine Ahnung, wie ich mit der Lösung dieser Aufgabe beginnen soll.
+        </p>
     </div>
     <div class="answer">
-        Um das N-te Element eines Array zu erhalten kannst Du "array[N]" benutzen.<br>
-        Die <a href="http://docs.python.org/3/tutorial/introduction.html#lists">Python Dokumentation</a> hilft hier auch.
+        <p>
+            Um das n-te Element eines Arrays zu erhalten, können Sie <b class="code">array[n]</b>. <a target="_blank" href="http://docs.python.org/3/tutorial/introduction.html#lists">Lists indexes</a> verwenden.
+        </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Ich brauche etwas Hilfe um weiter zu kommen.
+        <p>
+            Ich brauche Hilfe, um mit der Mission fortzufahren.
+        </p>
     </div>
     <div class="answer">
-        Vergiss nicht zu prüfen ob N innerhalb des Array liegt.
-<pre class="brush: python">
-if N < len(array):
-    ...
-else:
-    return -1
-</pre>
+        <p>
+            Vergessen Sie nicht zu prüfen, ob es sich innerhalb eines Arrays befindet.
+        </p>      
+        <pre class="brush: python">
+if n < len(array):
+    return ...
+return -1
+        </pre>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Ich hab's fast. Bitte hilf mir!
+        <p>
+            Ich bin auf halbem Weg steckengeblieben. Brauche Hilfe!
+        </p>
     </div>
     <div class="answer">
-        Um eine Potenz zu berechen benutze diesen Operator: "**".
-<pre class="brush: python">
+        <p>
+            Um eine Leistung zu berechnen, verwenden Sie den <b class="code">**</b> Operator.
+        </p>
+        <pre class="brush: python">
 2 ** 3 == 8
 4 ** 4 == 256
-    </pre>
+        </pre>
     </div>
 </div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Eine letzte Frage. Wie wird meine endgültige Lösung aussehen?
+        </p>
+    </div>
+    <div class="answer">
+        <div class="spoiler">
+        <pre class="brush: python">
+def index_power(array: list[int], n: int) -> int:   
 
-
+    if n < len(array):
+        return array[n]**n
+    return -1
+        </pre>
+        </div>
+    </div>
+</div>
 </body>
