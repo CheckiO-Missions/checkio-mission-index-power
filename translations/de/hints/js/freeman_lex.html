@@ -1,0 +1,126 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>Ich habe keine Ahnung, wie ich mit der Lösung dieser Aufgabe beginnen soll.</p>
+    </div>
+    <div class="answer">
+        <p>
+            💡 Die Idee ist, den angegebenen Index <b class="code">n</b> mit der Länge des angegebenen Arrays <b class="code">ar</b> zu vergleichen. Wenn <b class="code">n</b> innerhalb von <b class="code">ar</b> liegt, geben Sie das Element mit dem Index zurück, der auf <b class="code">n</b> liegt, andernfalls geben Sie <b class="code">-1</b> zurück.  
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Ok, womit soll ich anfangen?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Lesen Sie über <a target="_blank" href="https://www.w3schools.com/jsref/jsref_operators.asp">conditional (ternary) operator</a> und verwenden Sie es in Ihrem Code, um zu prüfen, ob der angegebene Index <b class="code">n</b> innerhalb des Arrays <b class="code">ar</b> liegt, was bedeutet, dass <b class="code">n</b> kleiner sein sollte als die Länge von <b class="code">ar</b>.
+        </p>
+        <pre class="brush: javascript">
+let result = n < ar.length? ...: ...;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ok, was ist als nächstes zu tun?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Falls die Bedingung <b class="code">true</b> lautet (der Index befindet sich innerhalb des Arrays), sollte Ihre Funktion das Element des Arrays mit diesem Index zurückgeben, das mit dem Index verbunden ist.
+        </p>
+        <pre class="brush: javascript">
+let result = n < ar.length? ar[n]**n: ...;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Wie vervollständige ich den bedingten Operator?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Laut der Beschreibung sollte Ihre Funktion nur <b class="code">-1</b> zurückgeben, wenn der Index außerhalb des Arrays liegt.
+        </p>
+        <pre class="brush: javascript">
+let result = n < ar.length? ar[n]**n: -1;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Wie sollte also meine endgültige Lösung aussehen?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Sie müssen nur Ihren Code in einen Funktionsausdruck einpacken und das Ergebnis zurückgeben.
+        </p>
+        <p>Hier ist die gesamte Lösung:</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+import assert from "assert";
+
+function indexPower(ar: number[], n: number): number {
+
+    let result = n < ar.length? ar[n]**n: -1;
+    return result
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Zeigen Sie mir mehr Lösungen!<br />
+        denn ich möchte ein echter 🥇 Javascript-Held sein!</p>
+    </div>
+    <div class="answer">
+        <p>Klar, schnappen Sie es sich!</p>
+        <p>
+            Diese Lösung ist im Großen und Ganzen die gleiche, verwendet aber eine anonyme Funktion und die Funktion <b class="code">Math.pow()</b> für die Stromversorgung. 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+var indexPower = (ar: number[], n: number): number => n < ar.length? Math.pow(ar[n], n): -1;
+        </pre>
+        </div>
+        <p>
+            Da <b class="code">Math.pow(ar[n], n) (or ar[n]**n)</b> <b class="code">NaN</b> zurückgibt, wenn der Index außerhalb des Arrays liegt, können Sie den logischen Operator "OR" <b class="code">||</b> anstelle des ternären Operators verwenden. 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+var indexPower = (ar: number[], n: number): number => ar[n] ** n || -1;
+// or
+var indexPower = (ar: number[], n: number): number => Math.pow(ar[n], n) || -1;
+        </pre>
+        </div>
+        <p>
+            Hier ist eine traditionellere Lösung, die die Anweisung <b class="code">if</b> verwendet. Beachten Sie, dass Sie <b class="code">else</b> nicht verwenden dürfen, wenn Sie <b class="code">return</b> innerhalb der obigen Anweisung verwenden. Sie dürfen auch keine geschweiften Klammern verwenden, wenn es nur einen Ausdruck innerhalb der Anweisung gibt und ein Semikolon nach dem letzten Ausdruck vor dem Schließen.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function indexPower(ar: number[], n: number): number {
+    
+    if (n < ar.length)
+        return ar[n]**n;
+    return -1
+}
+        </pre>
+        </div>
+        <p>Klicken Sie auf <b>Best Solutions</b> im Menü Mission und sehen Sie sich viele weitere interessante Lösungen an!</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Vielen Dank! Ich weiß und verstehe jetzt mehr! Alles funktioniert einwandfrei!</p>
+    </div>
+    <div class="answer">
+        👍 Freut mich zu hören!
+    </div>
+</div>
+</body>
