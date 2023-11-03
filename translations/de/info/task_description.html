@@ -1,24 +1,21 @@
 <p>
-    Vorgegeben werden ein Array mit positiven Zahlen und eine Zahl N.
-    Du sollst die N-te Potenz des Arrayelementes mit dem Index N finden.<br>
-    Falls N ausserhalb des Arrays liegt gebe -1 als Ergebnis zurück.
-    Vergiss nicht, dass das erste Element eines Arrays den Index 0 hat.
+    Sie erhalten {% if is_js %}ein Array <span>(array)</span>{% else %} eine Liste <span>(list)</span>{% endif %} mit positiven ganzen Zahlen <span>{% if is_js %}(number){% else %}(int){% endif %}</span> und einer ganzen Zahl <span>{% if is_js %}(number){% else %}(int){% endif %}</span> N. Sie sollen die N-te Potenz des Elements im Array {% if is_js %} <span>(array)</span> {% else %} list{% endif %} mit dem Index N finden. Wenn N außerhalb des Arrays {% if is_js %} <span>(array)</span> {% else %} list{% endif %} liegt, dann geben Sie -1 zurück. Vergessen Sie nicht, dass das erste Element den Index 0 hat.
 </p>
 <p style="text-align: center;">
     <img src="{{MEDIA_CONVERT}}title.png" class="title_img" />
 </p>
 <p>
-    Sehen wir uns zwei Beispiele an:<br>
-    - array = [1, 2, 3, 4] und N = 2, dann ist das Ergebnis 3<sup>2</sup> == 9;<br>
-    - array = [1, 2, 3] und N = 3, aber N liegt ausserhalb des Arrays, also ist das Ergebnis -1.
+    Schauen wir uns ein paar Beispiele an:<br>
+    - {% if is_js %}array{% else %} list{% endif %} = [1, 2, 3, 4] und N = 2, dann ist das Ergebnis<sup>32</sup> == 9;<br>
+    - {% if is_js %}array{% else %} list{% endif %} = [1, 2, 3] und N = 3, aber N liegt außerhalb von {% if is_js %}array{% else %} list{% endif %} , also ist das Ergebnis -1.
 </p>
 
 <p>
-    <strong>Eingabe: </strong> Zwei Argumente. Ein Array als Liste mit Integern und eine Zahl als Integer.
+   <strong>Eingabe:</strong> Zwei Argumente.{% if is_js %}Ein Array <span>(array)</span>{% else %} Eine Liste <span>(list)</span>{% endif %} von Ganzzahlen <span>{% if is_js %}(number){% else %}(int){% endif %}</span> und eine ganze Zahl <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.
 </p>
 
 <p>
-    <strong>Ausgabe: </strong> Das Ergebnis als Integer Wert.
+   <strong>Ausgabe:</strong> Das Ergebnis in Form einer ganzen Zahl <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.
 </p>
 
 
@@ -30,13 +27,13 @@
 </div>
 
 <p class="for_info_only">
-    <strong>Wozu das gut ist: </strong>
-    In dieser Aufgabe lernst Du den grundlegenden Umgang mit Arrays und Indizes, in Verbindung mit einfacher Mathematik.
+   <strong>Wie es verwendet wird:</strong>
+    In dieser Mission lernen Sie, wie Sie grundlegende Arrays und Indizes in Kombination mit einfacher Mathematik verwenden.
 </p>
 
 <p>
-    <strong>Voraussetzung:</strong>
-    0 &lt; len(array) &le; 10<br>
+   <strong>Vorbedingung:</strong>
+    0 &lt; len(Array) &le; 10<br>
     0 &le; N<br>
-    all(0 &le; x &le; 100 for x in array)<br>
+    all(0 &le; x &le; 100 für x in array)<br>
 </p>
