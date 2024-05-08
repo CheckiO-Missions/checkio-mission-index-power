@@ -7,19 +7,19 @@
     </div>
     <div class="answer">
         <p>
-            Um das n-te Element eines Arrays zu erhalten, können Sie <b class="code">array[n]</b>. <a target="_blank" href="http://docs.python.org/3/tutorial/introduction.html#lists">Lists indexes</a> verwenden.
+            Um das n-te Element eines Arrays zu erhalten, können Sie zunächst <b class="code">array[n]</b> verwenden. Lesen Sie mehr über <a target="_blank" href="http://docs.python.org/3/tutorial/introduction.html#lists">lists indexes</a>.
         </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
         <p>
-            Ich brauche Hilfe, um mit der Mission fortzufahren.
+            Ich brauche etwas Hilfe, um mit der Mission fortzufahren.
         </p>
     </div>
     <div class="answer">
         <p>
-            Vergessen Sie nicht zu prüfen, ob es sich innerhalb eines Arrays befindet.
+            Sie müssen mit Hilfe der Bedingungsanweisung und der Funktion <b class="code">len()</b> prüfen, ob sich das benötigte Element innerhalb eines Arrays befindet. Andernfalls geben Sie -1 zurück.
         </p>      
         <pre class="brush: python">
 if n < len(array):
@@ -31,16 +31,17 @@ return -1
 <div class="question-answer">
     <div class="question">
         <p>
-            Ich bin auf halbem Weg steckengeblieben. Brauche Hilfe!
+            Ich bin auf halbem Wege steckengeblieben. Brauche Hilfe!
         </p>
     </div>
     <div class="answer">
         <p>
-            Um eine Leistung zu berechnen, verwenden Sie den <b class="code">**</b> Operator.
+            Sie müssen das n-te Element auf die n-te Potenz erhöhen. Um eine Potenz zu berechnen, verwenden Sie den Operator <b class="code">**</b>.
         </p>
         <pre class="brush: python">
-2 ** 3 == 8
-4 ** 4 == 256
+2**3 == 8
+...
+array[n]**n
         </pre>
     </div>
 </div>
@@ -51,6 +52,7 @@ return -1
         </p>
     </div>
     <div class="answer">
+        <p>Sie müssen nur Ihren Code in einen Funktionsausdruck mit Typ-Hinweisen verpacken und das berechnete Ergebnis zurückgeben.</p>
         <div class="spoiler">
         <pre class="brush: python">
 def index_power(array: list[int], n: int) -> int:   
