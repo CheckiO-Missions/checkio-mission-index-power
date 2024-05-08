@@ -7,7 +7,7 @@
     </div>
     <div class="answer">
         <p>
-            Pour obtenir le n-ième élément d'un tableau, vous pouvez utiliser <b class="code">array[n]</b>. <a target="_blank" href="http://docs.python.org/3/tutorial/introduction.html#lists">Lists indexes</a>.
+            Tout d'abord, pour obtenir le n-ième élément d'un tableau, vous pouvez utiliser <b class="code">array[n]</b>. Lisez à propos de <a target="_blank" href="http://docs.python.org/3/tutorial/introduction.html#lists">lists indexes</a>.
         </p>
     </div>
 </div>
@@ -19,7 +19,7 @@
     </div>
     <div class="answer">
         <p>
-            N'oubliez pas de vérifier s'il se trouve à l'intérieur d'un tableau.
+            Vous devez vérifier si l'élément requis se trouve dans un tableau à l'aide d'une condition et de la fonction <b class="code">len()</b>. Dans le cas contraire, renvoyez -1.
         </p>      
         <pre class="brush: python">
 if n < len(array):
@@ -36,21 +36,23 @@ return -1
     </div>
     <div class="answer">
         <p>
-            Pour calculer une puissance, utilisez l'opérateur <b class="code">**</b>.
+            Vous devez élever le n-ième élément à la n-ième puissance. Pour calculer une puissance, utilisez l'opérateur <b class="code">**</b>.
         </p>
         <pre class="brush: python">
-2 ** 3 == 8
-4 ** 4 == 256
+2**3 == 8
+...
+array[n]**n
         </pre>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
         <p>
-            Une dernière question. A quoi ressemblera ma solution finale?
+            Une dernière question. À quoi ressemblera ma solution finale?
         </p>
     </div>
     <div class="answer">
+        <p>Il vous suffit d'envelopper votre code dans une expression de fonction avec des indications de type et de renvoyer le résultat calculé.</p>
         <div class="spoiler">
         <pre class="brush: python">
 def index_power(array: list[int], n: int) -> int:   
