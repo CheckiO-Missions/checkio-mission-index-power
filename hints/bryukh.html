@@ -7,7 +7,7 @@
     </div>
     <div class="answer">
         <p>
-            To get n-th element of an array you can use <b class="code">array[n]</b>. <a target="_blank" href="http://docs.python.org/3/tutorial/introduction.html#lists">Lists indexes</a>.
+            First of all, to get n-th element of an array you can use <b class="code">array[n]</b>. Read about <a target="_blank" href="http://docs.python.org/3/tutorial/introduction.html#lists">lists indexes</a>.
         </p>
     </div>
 </div>
@@ -19,7 +19,7 @@
     </div>
     <div class="answer">
         <p>
-            Don't forget to check is it's inside an array.
+            You need to check if needed element is inside an array using condition statement and <b class="code">len()</b> function. Otherwise return -1.
         </p>      
         <pre class="brush: python">
 if n < len(array):
@@ -36,11 +36,12 @@ return -1
     </div>
     <div class="answer">
         <p>
-            To calculate a power use the <b class="code">**</b> operator.
+            You need to raise n-th element to n-th power. To calculate a power use the <b class="code">**</b> operator.
         </p>
         <pre class="brush: python">
-2 ** 3 == 8
-4 ** 4 == 256
+2**3 == 8
+...
+array[n]**n
         </pre>
     </div>
 </div>
@@ -51,6 +52,7 @@ return -1
         </p>
     </div>
     <div class="answer">
+        <p>You just need to wrap you code into fuction expression with type hints and return the calculated result.</p>
         <div class="spoiler">
         <pre class="brush: python">
 def index_power(array: list[int], n: int) -> int:   
