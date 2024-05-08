@@ -7,19 +7,19 @@
     </div>
     <div class="answer">
         <p>
-            要获得一个数组的第n个元素，你可以使用<b class="code">array[n]</b>.<a target="_blank" href="http://docs.python.org/3/tutorial/introduction.html#lists">Lists indexes</a>.
+            首先，要获取数组中的第 n 个元素，可以使用<b class="code">array[n]</b> 。阅读<a target="_blank" href="http://docs.python.org/3/tutorial/introduction.html#lists">lists indexes</a> 。
         </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
         <p>
-            我需要一些帮助来继续完成任务。
+            我需要帮助才能完成任务。
         </p>
     </div>
     <div class="answer">
         <p>
-            不要忘了检查它是否在一个数组内。
+            您需要使用条件语句和<b class="code">len()</b> 函数检查所需元素是否在数组内。否则返回 -1。
         </p>      
         <pre class="brush: python">
 if n < len(array):
@@ -31,26 +31,28 @@ return -1
 <div class="question-answer">
     <div class="question">
         <p>
-            我已经走了一半的路了。需要帮助!
+            我做了一半就不行了。需要帮助！
         </p>
     </div>
     <div class="answer">
         <p>
-            要计算功率，请使用<b class="code">**</b> 算子。
+            您需要将第 n 个元素提升到第 n 次幂。要计算幂，请使用<b class="code">**</b> 运算符。
         </p>
         <pre class="brush: python">
-2 ** 3 == 8
-4 ** 4 == 256
+2**3 == 8
+...
+array[n]**n
         </pre>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
         <p>
-            最后一个问题。我的最终解决方案会是什么样子的？
+            最后一个问题。我的最终解决方案是怎样的？
         </p>
     </div>
     <div class="answer">
+        <p>您只需将代码封装为带有类型提示的函数表达式，并返回计算结果即可。</p>
         <div class="spoiler">
         <pre class="brush: python">
 def index_power(array: list[int], n: int) -> int:   
