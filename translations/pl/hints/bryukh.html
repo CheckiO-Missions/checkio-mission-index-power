@@ -7,7 +7,7 @@
     </div>
     <div class="answer">
         <p>
-            Aby uzyskać n-ty element tablicy można użyć <b class="code">array[n]</b>. <a target="_blank" href="http://docs.python.org/3/tutorial/introduction.html#lists">Lists indexes</a>.
+            Po pierwsze, aby uzyskać n-ty element tablicy można użyć <b class="code">array[n]</b>. Proszę poczytać o <a target="_blank" href="http://docs.python.org/3/tutorial/introduction.html#lists">lists indexes</a>.
         </p>
     </div>
 </div>
@@ -19,7 +19,7 @@
     </div>
     <div class="answer">
         <p>
-            Proszę nie zapomnieć sprawdzić, czy znajduje się wewnątrz tablicy.
+            Musi Pan sprawdzić, czy wymagany element znajduje się wewnątrz tablicy, używając instrukcji warunku i funkcji <b class="code">len()</b>. W przeciwnym razie proszę zwrócić -1.
         </p>      
         <pre class="brush: python">
 if n < len(array):
@@ -31,16 +31,17 @@ return -1
 <div class="question-answer">
     <div class="question">
         <p>
-            Zniknąłem w połowie. Proszę o pomoc!
+            Jestem w połowie drogi. Proszę o pomoc!
         </p>
     </div>
     <div class="answer">
         <p>
-            Aby obliczyć moc, proszę użyć operatora <b class="code">**</b>.
+            Musi Pan podnieść n-ty pierwiastek do n-tej potęgi. Do obliczenia potęgi proszę użyć operatora <b class="code">**</b>.
         </p>
         <pre class="brush: python">
-2 ** 3 == 8
-4 ** 4 == 256
+2**3 == 8
+...
+array[n]**n
         </pre>
     </div>
 </div>
@@ -51,6 +52,7 @@ return -1
         </p>
     </div>
     <div class="answer">
+        <p>Musi Pan po prostu zawinąć swój kod w wyrażenie funkcyjne z podpowiedziami typu i zwrócić obliczony wynik.</p>
         <div class="spoiler">
         <pre class="brush: python">
 def index_power(array: list[int], n: int) -> int:   
