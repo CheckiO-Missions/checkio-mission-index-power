@@ -1,26 +1,26 @@
-<body data-author="freeman_lex">
+<body data-author="bryukh">
 <div class="question-answer">
     <div class="question">
         <p>
-            Я не знаю, як підійти до розв'язання цієї місії.
+            Я не уявляю, як почати вирішувати цю місію.
         </p>
     </div>
     <div class="answer">
         <p>
-            Щоб отримати n-й елемент масиву (списку) ти можеш використати <b class="code">масив[n]</b>. Поглянь: <a target="_blank" href="http://docs.python.org/3/tutorial/introduction.html#lists">Lists indexes</a>.
+            Перш за все, для отримання n-го елементу масиву можна використати <b class="code">array[n]</b>. Почитайте про <a target="_blank" href="http://docs.python.org/3/tutorial/introduction.html#lists">lists indexes</a>.
         </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
         <p>
-            Мені потрібна певна допомога, щоб продовжити розв'язок.
+            Мені потрібна допомога для продовження місії.
         </p>
     </div>
     <div class="answer">
         <p>
-            Не забудь перевірити, чи <b class="code">n</b> всередині масиву і пам'ятай, що нумерація в масивах починається із 0.
-        </p>
+            Вам потрібно перевірити, чи знаходиться потрібний елемент всередині масиву, використовуючи оператор умови та функцію <b class="code">len()</b>. У протилежному випадку повернути -1.
+        </p>      
         <pre class="brush: python">
 if n < len(array):
     return ...
@@ -31,29 +31,31 @@ return -1
 <div class="question-answer">
     <div class="question">
         <p>
-            Половину я вже зробив, але потребую допомоги знову!
+            Я не можу пройти половину шляху. Допоможіть!
         </p>
     </div>
     <div class="answer">
         <p>
-            Щоб отримати ступінь числа, використовуй оператор <b class="code">**</b>. Наприклад:
+            Потрібно піднести n-й елемент до n-го степеня. Для обчислення степеня використовується оператор <b class="code">**</b>.
         </p>
         <pre class="brush: python">
-2 ** 3 == 8
-4 ** 4 == 256
+2**3 == 8
+...
+array[n]**n
         </pre>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
         <p>
-            І останнє запитання. Як моє остаточне рішення має виглядати?
+            І останнє питання. Як буде виглядати мій остаточний розв'язок?
         </p>
     </div>
     <div class="answer">
+        <p>Вам просто потрібно обернути ваш код у вираз з підказками типів і повернути обчислений результат.</p>
         <div class="spoiler">
         <pre class="brush: python">
-def index_power(array: list[int], n: int) -> int:
+def index_power(array: list[int], n: int) -> int:   
 
     if n < len(array):
         return array[n]**n
