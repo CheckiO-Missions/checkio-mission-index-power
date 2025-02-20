@@ -1,9 +1,11 @@
-<p>
-    Sie erhalten {% if is_js %}ein Array <span>(array)</span>{% else %} eine Liste <span>(list)</span>{% endif %} mit positiven ganzen Zahlen <span>{% if is_js %}(number){% else %}(int){% endif %}</span> und einer ganzen Zahl <span>{% if is_js %}(number){% else %}(int){% endif %}</span> N. Sie sollen die N-te Potenz des Elements im Array {% if is_js %} <span>(array)</span> {% else %} list{% endif %} mit dem Index N finden. Wenn N außerhalb des Arrays {% if is_js %} <span>(array)</span> {% else %} list{% endif %} liegt, dann geben Sie -1 zurück. Vergessen Sie nicht, dass das erste Element den Index 0 hat.
-</p>
 <p style="text-align: center;">
     <img src="{{MEDIA_CONVERT}}title.png" class="title_img" />
 </p>
+
+<p>
+    Sie erhalten {% if is_js %}ein Array <span>(array)</span>{% else %} eine Liste <span>(list)</span>{% endif %} mit positiven ganzen Zahlen <span>{% if is_js %}(number){% else %}(int){% endif %}</span> und einer ganzen Zahl <span>{% if is_js %}(number){% else %}(int){% endif %}</span> N. Sie sollen die N-te Potenz des Elements im Array {% if is_js %} <span>(array)</span> {% else %} list{% endif %} mit dem Index N finden. Wenn N außerhalb des Arrays {% if is_js %} <span>(array)</span> {% else %} list{% endif %} liegt, dann geben Sie -1 zurück. Vergessen Sie nicht, dass das erste Element den Index 0 hat.
+</p>
+
 <p>
     Schauen wir uns ein paar Beispiele an:<br>
     - {% if is_js %}array{% else %} list{% endif %} = [1, 2, 3, 4] und N = 2, dann ist das Ergebnis<sup>32</sup> == 9;<br>
